@@ -15,7 +15,7 @@ public class UserDetailsServiceImp implements UserDetailsService {
     @Autowired
     private UserRepo userRepo;
 
-    @Override
+    @Override//Help to load user from username/email
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
 
 

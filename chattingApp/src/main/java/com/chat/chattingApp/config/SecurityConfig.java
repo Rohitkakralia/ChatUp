@@ -85,9 +85,9 @@ public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         source.registerCorsConfiguration("/**", configuration);
         return source;
     }
-    @Bean
+    @Bean//This will authenticate whether id and password correct or not (call from login controller)
     public AuthenticationManager authenticationManager(AuthenticationConfiguration authConfig) throws Exception {
-        System.out.println("in AuthManaget");
+        System.out.println("in AuthManager");
         return authConfig.getAuthenticationManager();
     }
 

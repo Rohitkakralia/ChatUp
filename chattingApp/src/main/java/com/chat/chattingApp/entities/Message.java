@@ -20,7 +20,7 @@ public class Message {
     @Id
     private ObjectId id;
 
-    private ObjectId roomId; // Reference to ChatRoom
+    private String roomId; // Reference to ChatRoom
 
     private ObjectId senderId; // Who sent the message
 
@@ -46,4 +46,76 @@ public class Message {
     private boolean isEdited = false;
 
     private LocalDateTime editedAt;
+
+    public ObjectId getId() {
+        return id;
+    }
+
+    public void setId(ObjectId id) {
+        this.id = id;
+    }
+
+    public String getRoomId() {
+        return roomId;
+    }
+
+    public void setRoomId(String roomId) {
+        this.roomId = roomId;
+    }
+
+    public ObjectId getSenderId() {
+        return senderId;
+    }
+
+    public void setSenderId(ObjectId senderId) {
+        this.senderId = senderId;
+    }
+
+    public ObjectId getReceiverId() {
+        return receiverId;
+    }
+
+    public void setReceiverId(ObjectId receiverId) {
+        this.receiverId = receiverId;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    public LocalDateTime getTimestamp() {
+        return timestamp;
+    }
+
+    public void setTimestamp(LocalDateTime timestamp) {
+        this.timestamp = timestamp;
+    }
+
+    public boolean isDeleted() {
+        return isDeleted;
+    }
+
+    public void setDeleted(boolean deleted) {
+        isDeleted = deleted;
+    }
+
+    public boolean isEdited() {
+        return isEdited;
+    }
+
+    public void setEdited(boolean edited) {
+        isEdited = edited;
+    }
+
+    public LocalDateTime getEditedAt() {
+        return editedAt;
+    }
+
+    public void setEditedAt(LocalDateTime editedAt) {
+        this.editedAt = editedAt;
+    }
 }
